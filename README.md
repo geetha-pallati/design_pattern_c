@@ -54,3 +54,22 @@
     People often confuse these because both use function pointers.
         Strategy is about choosing how to do something (e.g., Sort A vs. Sort B).
         Adapter is about fixing a mismatch between two existing pieces of code so they can talk to each other.
+# State Pattern in c
+    The State Pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes. To the outside world, it looks like the object has changed its class entirely.
+
+    In C, we implement this by creating a State Machine. Instead of using a giant switch or if-else block to check the current state, the object holds a pointer to a "State" struct that contains its current behavior.
+
+    The Core Concept
+        Imagine a Vending Machine.
+            If it is in the IDLE state and you press a button, it does nothing.
+            If it is in the HAS_COIN state and you press a button, it dispenses a product.
+    When to use this in C?
+        Embedded Systems: Handling different modes of a device (e.g., Low Power Mode, Active Mode, Charging Mode).
+        Game Development: Managing player states (e.g., Idle, Running, Jumping, Attacking).
+        Protocol Stacks: Handling TCP/IP connections (e.g., Listen, Syn-Sent, Established).
+
+    Why use State instead of a Switch statement?
+    Feature,Switch-Case approach,State Pattern approach
+    Organization,Logic for all states is in one huge function.,Each state's logic is in its own small struct/function.
+    Complexity,"Becomes a ""spaghetti"" mess as you add more states.",Adding a new state is as simple as creating a new struct.
+    Transitions,Hard to track where state changes happen.,Transitions are explicit and handled within the state logic.
