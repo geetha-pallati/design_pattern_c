@@ -17,14 +17,21 @@
     6.Device Drivers: A generic open() function that creates a specific driver instance based on the hardware connected.   
 
 # Strategey pattern in c
-    The Strategy Pattern is a behavioral design pattern that lets you define a family of algorithms, put each one into a separate class/struct, and make their objects interchangeable.
+    The Strategy Pattern is a behavioral design pattern that lets you define a family of algorithms,
+     put each one into a separate class/struct, and make their objects interchangeable.
 
-    In simpler terms: instead of using a massive if-else or switch block to decide how to perform a task, you plug in a specific "strategy" at runtime.
-    The Strategy Concept
-        Imagine a Navigation App. It can calculate a route for walking, driving, or public transport. Without the Strategy Pattern, you'd have one giant function with complex logic for every mode of transport. With the Strategy Pattern, you have three separate "strategies," and the app simply picks the one it needs.
+    In simpler terms: instead of using a massive if-else or switch block to decide how to perform a task,
+     you plug in a specific "strategy" at runtime.
+    The Strategy Concept:
+        Imagine a Navigation App. It can calculate a route for walking, driving, or public transport.
+        Without the Strategy Pattern, you'd have one giant function with complex logic for every mode
+        of transport. With the Strategy Pattern, you have three separate "strategies," and the app simply 
+        picks the one it needs.
 
 # Observer Pattern in c
-    The Observer Pattern is a behavioral design pattern used to create a subscription mechanism. It allows multiple objects (Observers) to "listen" to another object (the Subject) and get notified automatically whenever that subject changes its state.
+    The Observer Pattern is a behavioral design pattern used to create a subscription mechanism. 
+    It allows multiple objects (Observers) to "listen" to another object (the Subject) and 
+    get notified automatically whenever that subject changes its state.
 
     In C, we implement this using an array of function pointers inside the Subject.
 
